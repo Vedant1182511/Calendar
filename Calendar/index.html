@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container flex">
+      <div class="calendar">
+        <div class="month flex">
+          <img class="prev" src="./left-arrow.png" alt="Previous month" />
+          <div class="content">
+            <h1 id="month-name">May</h1>
+            <p id="full-date">Wed May 11th 2022</p>
+          </div>
+          <img class="next" src="./right-arrow.png" alt="Next month" />
+
+          <div class="year-nav flex">
+            <button id="prev-year" title="Previous Year">&lt;&lt;</button>
+            <span id="year-display">2025</span>
+            <button id="next-year" title="Next Year">&gt;&gt;</button>
+          </div>
+        </div>
+        <div class="weekdays flex">
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thur</div>
+          <div>Fri</div>
+          <div>Sat</div>
+          <div>Sun</div>
+        </div>
+        <div class="days flex"></div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

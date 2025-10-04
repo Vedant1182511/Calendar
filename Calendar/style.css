@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(33, 32, 32);
+}
+
+.calendar {
+  width: 430px;
+  height: 500px;
+  background-color: rgb(243, 237, 244);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.669), -10px -10px 20px rgba(0, 0, 0, 0.436);
+}
+
+.calendar .month {
+  width: 100%;
+  height: 20%;
+  padding: 20px 30px;
+  background-image: linear-gradient(90deg, #191475 0%, #4242AD 55%, #1D9AB3 100%);
+  justify-content: space-between !important;
+  text-align: center;
+  position: relative;
+}
+
+/* Left & Right arrows */
+.calendar .month img {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.month img:hover {
+  opacity: 0.8;
+}
+
+/* Month name */
+.month h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  color: white;
+}
+
+/* Date string */
+.month p {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: cursive;
+}
+
+/* Year navigation buttons container */
+.year-nav {
+  margin-left: 15px;
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+/* Year navigation buttons styles */
+.year-nav button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.year-nav button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Year display */
+#year-display {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.weekdays {
+  width: 100%;
+  padding: 10px;
+  height: 10%;
+  padding-bottom: 0;
+}
+
+.weekdays div {
+  width: calc(430px / 7);
+  height: 80%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 5px;
+  transition: 0.2s;
+}
+
+.days {
+  width: 100%;
+  height: 70%;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 30px 10px;
+  padding-top: 0;
+}
+
+.days div {
+  width: calc(400px / 7);
+  height: calc(400px / 7);
+  text-align: center;
+  font-size: 13.5px;
+  font-family: cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s;
+}
+
+.days .previous-days,
+.days .next-days {
+  color: rgba(0, 0, 0, 0.349);
+}
+
+.days .today {
+  background-color: #4679d7;
+  cursor: pointer;
+  color: white;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.days .today:hover {
+  background-color: #f95c79;
+}
+
+.days div:not(.today):hover {
+  border-radius: 0;
+  border: 0.5px solid black;
+  background-color: rgba(0, 0, 0, 0.215);
+  cursor: pointer;
+}
+
